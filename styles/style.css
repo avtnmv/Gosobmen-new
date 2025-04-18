@@ -187,7 +187,11 @@ gap: 10px;
 .logo-svg{
     display: none;
 }
-
+.underline{
+    color: #032D71;
+    text-decoration: underline;
+    font-weight: 600;
+}
 @media (max-width: 1200px) {
     .wrapper{
         background-image: url(../images/mobile-bg.png);
