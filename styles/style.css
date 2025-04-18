@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Igra Sans';
+    src: url(../fonts/IgraSans.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(../fonts/BebasNeueBold.woff2) format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.wrapper {
+    background-image: url(../images/destop-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    padding-top: 100px;
+    padding-left: 200px;
+}
+
+.title{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    font-size: 100px;
+    margin-top: 30px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.subtitle{
+    font-family: "Igra Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 26px;
+    color: white;
+    margin-bottom: 45px;
+}
+.access{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 60px;
+    background-color: white;
+    border-radius: 10px;
+    width: 635px;
+    font-family: "Igra Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+.content{
+    margin-top: 15px;
+}
+.links{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.link-first{
+    background-image: url(../images/link-first.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 320px;
+    height: 95px;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 22px;
+    animation: pulse 1.5s infinite;
+}
+.link-second{
+    background-image: url(../images/link-second.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 320px;
+    height: 95px;
+    text-transform: uppercase;
+    color: #2C2C2C;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 22px;
+    animation: pulse 1.5s infinite;
+}
+.offices{
+    background-image: url(../images/offices-bg.svg);
+    height: 194px;
+    width: 303px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.offices-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 21px;
+    padding-left: 25px;
+    font-family: "Igra Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.office-table {
+    display: table;
+    border-collapse: collapse;
+    margin-left: 25px;
+    margin-top: 10px;
+    font-family: "Igra Sans", sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    min-width: 90px;
+    border-right: 1px solid #032D71;
+    border-bottom: 1px solid #032D71;
+}
+
+/* Убираем правую границу у последней ячейки в строке */
+.table-row .table-cell:last-child {
+    border-right: none;
+}
+
+/* Убираем нижнюю границу у последней строки */
+.office-table .table-row:last-child .table-cell {
+    border-bottom: none;
+}
+
+/* Правая ячейка, как объединённые две */
+.wide-cell {
+    min-width: 160px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 1.5;
+}
+.office-link {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: underline;
+    color: #032D71;
+    width: 90%;
+    margin: 0; 
+    padding: 0; 
+    line-height: 1; 
+}
+
+.office-link svg {
+    margin: 0; 
+}
+.office-link svg {
+    animation: moveArrow 1.5s infinite alternate; 
+}
+.access-mobile{
+    display: none;
+}
+.logo-svg{
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .wrapper{
+        background-image: url(../images/mobile-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 1124px;
+        padding: 0;
+        padding-top: 25px;
+
+    }
+    .logo{
+        width: 202px !important; 
+        height: 34px !important;
+    }
+    .title{
+        font-size: 55px;
+        margin-bottom: 370px;
+    }
+    .subtitle{
+        display: none;
+    }
+    .access{
+        display: none;
+    }
+    .content{
+        flex-direction: column-reverse;
+    }
+    .mobile-container{
+        width: 340px;
+        margin: auto;
+    }
+    .offices{
+        background-image: url(../images/offices-bg.svg);
+        height: 218px;
+        width: 340px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 10px;
+    }
+    .links{
+        background-color: white;
+        width: 340px;
+        align-items: center;
+        height: 290px;
+        border-radius: 20px;
+    }
+    .access-mobile{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 310px;
+        font-family: 'Igra Sans';
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .access-mobile svg{
+        flex-shrink: 0;
+    }
+    .logo-svg{
+        display: block;
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0); 
+    }
+    50% {
+        transform: translateX(12px);
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
